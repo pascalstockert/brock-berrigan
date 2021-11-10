@@ -1,0 +1,12 @@
+{
+  "name": "brock-berrigan",
+  "version": "0.1.0",
+  "description": "Site makeover for Brock Berrigan's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass scss/styles.scss styles.css",
+    "watch": "sass --watch scss/styles.scss:styles.css"
+  },
+  "author": "Pascal Stockert",
+  "license": "ISC"
+}
