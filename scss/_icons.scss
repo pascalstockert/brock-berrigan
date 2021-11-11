@@ -1,0 +1,52 @@
+@import 'fontawesome/fontawesome';
+@import 'fontawesome/solid';
+@import 'fontawesome/brands';
+
+@mixin icon-solid($icon, $size: 32px) {
+  @extend %fa-icon;
+  @extend .fas;
+  &:before {
+    content: fa-content($icon);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: $size;
+    transform: translate(-50%, -50%);
+  }
+}
+@mixin icon-brand($icon, $size: 32px) {
+  @extend %fa-icon;
+  @extend .fab;
+  &:before {
+    content: fa-content($icon);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: $size;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  &.youtube {
+    @include icon-brand($fa-var-youtube);
+  }
+  &.spotify {
+    @include icon-brand($fa-var-spotify);
+  }
+  &.music {
+    @include icon-solid($fa-var-music, 30px);
+  }
+  &.deezer {
+    @include icon-brand($fa-var-deezer);
+  }
+  &.instagram {
+    @include icon-brand($fa-var-instagram);
+  }
+  &.twitter {
+    @include icon-brand($fa-var-twitter, 30px);
+  }
+}
