@@ -1,3 +1,11 @@
+@use "colors";
+@use "typography";
+
+:root {
+  font-size: 12px;
+}
+
 body {
   margin: unset;
+  background-color: colors.$l0;
 }
