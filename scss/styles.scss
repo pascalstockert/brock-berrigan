@@ -1,6 +1,7 @@
 @use "colors";
 @use "icons";
 @use "typography";
+@use "utility";
 
 :root {
   font-size: 12px;
@@ -64,6 +65,41 @@ header {
     transform: translateX(-50%);
     .icon:not(:last-child) {
       margin-right: 24px;
+    }
+  }
+}
+
+section {
+  margin: 128px 0;
+}
+
+.news {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    top: 50%;
+    left: 50%;
+    background: url("/assets/svg/mask.svg") no-repeat center;
+    background-size: contain;
+    opacity: .3;
+    transform: translate(-50%, -50%);
+  }
+  .item {
+    img {
+      width: 144px;
+      height: 144px;
+      border: 5px solid colors.$l1;
+      border-radius: 5px;
+      margin-right: 16px;
+    }
+    .content {
+      padding-top: 5px;
     }
   }
 }
