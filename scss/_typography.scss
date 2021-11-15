@@ -37,9 +37,6 @@
   color: colors.$base;
   font-family: 'Barlow', sans-serif;
   font-size: 1.5rem;
-  &.cursive {
-    font-style: italic;
-  }
 }
 h1 {
   @include header;
@@ -57,4 +54,16 @@ h3 {
 }
 p {
   margin-top: 8px;
+  font-weight: 200;
+}
+.track {
+  .title {
+    margin-bottom: 4px;
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+  .author {
+    margin: 0;
+    font-style: italic;
+  }
 }

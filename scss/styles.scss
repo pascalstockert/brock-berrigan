@@ -2,6 +2,7 @@
 @use "icons";
 @use "typography";
 @use "utility";
+@use "scrollbar";
 
 :root {
   font-size: 12px;
@@ -100,6 +101,37 @@ section {
     }
     .content {
       padding-top: 5px;
+    }
+  }
+}
+
+.album-spotlight {
+  .latest-release {
+    display: flex;
+    img {
+      max-width: 400px;
+      aspect-ratio: 1/1;
+      border: 10px solid colors.$l1;
+      border-radius: 5px;
+    }
+    .content {
+      display: flex;
+      flex-grow: 1;
+      .text {
+        padding: 12px 24px;
+        width: 60%;
+      }
+      .tracks {
+        width: 40%;
+        max-height: 400px;
+        overflow: auto;
+        .track {
+          padding: 8px 16px 16px 8px;
+          &:not(:last-child) {
+            border-bottom: 2px solid colors.$l1;
+          }
+        }
+      }
     }
   }
 }

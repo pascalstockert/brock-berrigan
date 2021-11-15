@@ -6185,9 +6185,6 @@ readers do not read off random characters that represent icons */
   font-family: "Barlow", sans-serif;
   font-size: 1.5rem;
 }
-*.cursive {
-  font-style: italic;
-}
 
 h1 {
   margin: 0 0 32px 0;
@@ -6231,20 +6228,83 @@ h3 + h4 {
 
 p {
   margin-top: 8px;
+  font-weight: 200;
 }
 
+.track .title {
+  margin-bottom: 4px;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.track .author {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Container */
 .container {
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Flex Box */
 .d-flex {
   display: flex;
 }
 
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/* Misc */
+.highlight {
+  padding: 64px 0;
+  background-color: #272325;
+}
+
 .shadow {
   filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.25));
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FCF3D0;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FCF3D0;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #FCF3D0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 2px solid #FCF3D0;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 :root {
@@ -6344,6 +6404,35 @@ section {
 }
 .news .item .content {
   padding-top: 5px;
+}
+
+.album-spotlight .latest-release {
+  display: flex;
+}
+.album-spotlight .latest-release img {
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  border: 10px solid #423B3F;
+  border-radius: 5px;
+}
+.album-spotlight .latest-release .content {
+  display: flex;
+  flex-grow: 1;
+}
+.album-spotlight .latest-release .content .text {
+  padding: 12px 24px;
+  width: 60%;
+}
+.album-spotlight .latest-release .content .tracks {
+  width: 40%;
+  max-height: 400px;
+  overflow: auto;
+}
+.album-spotlight .latest-release .content .tracks .track {
+  padding: 8px 16px 16px 8px;
+}
+.album-spotlight .latest-release .content .tracks .track:not(:last-child) {
+  border-bottom: 2px solid #423B3F;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,33 @@
+@use "colors";
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: colors.$base;
+  border: none;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: colors.$base;
+}
+::-webkit-scrollbar-thumb:active {
+  background: colors.$base;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 2px solid colors.$base;
+}
+::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
