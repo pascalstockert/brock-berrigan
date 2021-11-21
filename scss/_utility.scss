@@ -10,10 +10,18 @@
 /* Flex Box */
 .d-flex {
   display: flex;
+  gap: 16px;
+}
+.col-half {
+  flex: 0.5;
 }
 .justify-content-between {
   justify-content: space-between;
 }
+
+/* Textarea */
+.resize-x { resize: horizontal; }
+.resize-y { resize: vertical; }
 
 /* Misc */
 .highlight {

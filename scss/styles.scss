@@ -3,9 +3,14 @@
 @use "typography";
 @use "utility";
 @use "scrollbar";
+@use "inputs";
 
 :root {
   font-size: 12px;
+}
+
+::selection {
+  background: colors.$accent;
 }
 
 body {
@@ -88,7 +93,7 @@ section {
     left: 50%;
     background: url("/assets/svg/mask.svg") no-repeat center;
     background-size: contain;
-    opacity: .3;
+    opacity: .4;
     transform: translate(-50%, -50%);
   }
   .item {
@@ -133,5 +138,54 @@ section {
         }
       }
     }
+  }
+}
+.album-carousel {
+  position: relative;
+  width: 100%;
+  margin-top: 32px;
+  .cover-container {
+    display: flex;
+    overflow-x: hidden;
+  }
+  .cover {
+    flex: 0 0 calc(25% - 24px);
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    background-color: colors.$l1;
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: auto;
+    &.left {
+      left: -82px;
+      transform: translateY(-50%);
+    }
+    &.right {
+      right: -82px;
+      transform: translateY(-50%) rotateZ(180deg);
+      fill: #FCF3D0;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  .socials {
+    display: flex;
+    margin-bottom: 64px;
+    gap: 24px;
+  }
+  a {
+    margin-bottom: 64px;
+    text-transform: uppercase;
+    text-decoration: none;
   }
 }

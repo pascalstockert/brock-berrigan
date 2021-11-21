@@ -1,0 +1,39 @@
+@use "colors";
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 4px 8px;
+  border: 2px solid colors.$base;
+  border-radius: 3px;
+  background: transparent;
+}
+
+button {
+  z-index: 2;
+  position: relative;
+  box-sizing: content-box;
+  padding: 8px 32px;
+  border: 2px solid colors.$base;
+  text-transform: uppercase;
+  background: transparent;
+  transition: .3s ease-out;
+  &:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: colors.$base;
+    transition: .3s
+  }
+  &:hover, &:focus {
+    color: colors.$l0;
+    cursor: pointer;
+    &:before {
+      height: 100%;
+    }
+  }
+}
