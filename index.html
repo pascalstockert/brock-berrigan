@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Brock Berrigan</title>
 </head>
-<body>
+<body class="index-page">
     <header>
         <div class="video-wrapper">
             <video loop autoplay muted>
@@ -15,13 +15,13 @@
             </video>
         </div>
         <div class="title">
-            <h1>Brock<br>Berrigan</h1>
+            <h1>Brock <br>Berrigan</h1>
             <h4>The Masked Multi-Instrumentalist</h4>
         </div>
         <menu>
-            <li><a href="?"><h3>About</h3></a></li>
-            <li><a href="?"><h3>Discography</h3></a></li>
-            <li><a href="?"><h3>Contact</h3></a></li>
+            <li><a href="./about.html"><h3>About</h3></a></li>
+            <li><a href="./discography.html"><h3>Discography</h3></a></li>
+            <li><a onclick="scrollToContact()"><h3>Contact</h3></a></li>
         </menu>
         <div class="gradient"></div>
         <div class="socials">
@@ -40,7 +40,7 @@
             <div class="item">
                 <div class="d-flex">
                     <img class="shadow"
-                         src="/assets/images/covers/smooth-sailing.jpg"
+                         src="./assets/images/covers/smooth-sailing.jpg"
                          alt="cover art">
                     <div class="content">
                         <h3>New Album</h3>
@@ -52,7 +52,7 @@
             <div class="item">
                 <div class="d-flex">
                     <img class="shadow"
-                         src="/assets/images/covers/smooth-sailing.jpg"
+                         src="./assets/images/covers/smooth-sailing.jpg"
                          alt="cover art">
                     <div class="content">
                         <h3>New Album</h3>
@@ -64,7 +64,7 @@
             <div class="item">
                 <div class="d-flex">
                     <img class="shadow"
-                         src="/assets/images/covers/smooth-sailing.jpg"
+                         src="./assets/images/covers/smooth-sailing.jpg"
                          alt="cover art">
                     <div class="content">
                         <h3>New Album</h3>
@@ -76,7 +76,7 @@
             <div class="item">
                 <div class="d-flex">
                     <img class="shadow"
-                         src="/assets/images/covers/smooth-sailing.jpg"
+                         src="./assets/images/covers/smooth-sailing.jpg"
                          alt="cover art">
                     <div class="content">
                         <h3>Blog Post</h3>
@@ -94,7 +94,7 @@
             <div class="album-spotlight">
                 <div class="latest-release">
                     <img class="shadow"
-                         src="/assets/images/covers/smooth-sailing.jpg"
+                         src="./assets/images/covers/smooth-sailing.jpg"
                          alt="cover-art">
                     <div class="content">
                         <div class="text">
@@ -164,19 +164,19 @@
                     <div class="cover"></div>
                     <div class="cover"></div>
                     <div class="cover"></div>
-                    <div class="cover"></div>
-                    <div class="cover"></div>
-                    <div class="cover"></div>
                 </div>
-                <!-- TODO apply fill styling via JS: arrow.contentDocument.children[0].style.fill = "#ffffff" -->
-                <object class="arrow left" data="assets/svg/arrow.svg" type="image/svg+xml"></object>
-                <object class="arrow right" data="assets/svg/arrow.svg" type="image/svg+xml"></object>
+                <svg class="arrow left" fill="transparent" viewBox="0 0 44 62" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.0787 2.40202C40.3972 1.41273 42.2791 2.35344 42.2791 4.00174L42.2791 58.4309C42.2791 60.0568 40.442 61.0033 39.1181 60.0594L1.92106 33.5416C0.819077 32.756 0.799185 31.1256 1.88167 30.3134L39.0787 2.40202Z" stroke="#FCF3D0" stroke-width="2"/>
+                </svg>
+                <svg class="arrow right" fill="transparent" viewBox="0 0 44 62" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.0787 2.40202C40.3972 1.41273 42.2791 2.35344 42.2791 4.00174L42.2791 58.4309C42.2791 60.0568 40.442 61.0033 39.1181 60.0594L1.92106 33.5416C0.819077 32.756 0.799185 31.1256 1.88167 30.3134L39.0787 2.40202Z" stroke="#FCF3D0" stroke-width="2"/>
+                </svg>
             </div>
 
         </div>
     </section>
 
-    <section class="container">
+    <section id="contact" class="container">
         <div class="d-flex">
             <div class="col-half">
                 <h2>Contact</h2>

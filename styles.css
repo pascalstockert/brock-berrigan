@@ -1,10 +1,337 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Pinyon+Script&display=swap");
+.index-page header {
+  position: relative;
+}
+.index-page header .video-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+  max-height: 700px;
+  overflow: hidden;
+  filter: brightness(0.3);
+}
+.index-page header .video-wrapper video {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.index-page header .title {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+.index-page header menu {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  margin: unset;
+  padding: unset;
+  transform: translateY(-50%);
+}
+.index-page header menu li {
+  list-style: none;
+}
+.index-page header menu li a {
+  text-decoration: none;
+}
+.index-page header menu li a h3 {
+  color: #FCF3D0;
+}
+.index-page header .gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(0, #131112 10%, #13111200 100%);
+}
+.index-page header .socials {
+  position: absolute;
+  display: flex;
+  flex-flow: row;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.index-page header .socials .icon:not(:last-child) {
+  margin-right: 24px;
+}
+.index-page .news {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.index-page .news:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  top: 50%;
+  left: 50%;
+  background: url("./assets/svg/mask.svg") no-repeat center;
+  background-size: contain;
+  opacity: 0.4;
+  transform: translate(-50%, -50%);
+}
+.index-page .news .item img {
+  width: 144px;
+  height: 144px;
+  border: 5px solid #423B3F;
+  border-radius: 5px;
+  margin-right: 16px;
+}
+.index-page .news .item .content {
+  padding-top: 5px;
+}
+.index-page .album-carousel {
+  position: relative;
+  width: 100%;
+  margin-top: 32px;
+}
+.index-page .album-carousel .cover-container {
+  display: flex;
+  overflow-x: hidden;
+}
+.index-page .album-carousel .cover {
+  flex: 0 0 calc(25% - 24px);
+  aspect-ratio: 1/1;
+  border: 5px solid #423B3F;
+  border-radius: 5px;
+  background-size: cover;
+}
+.index-page .album-carousel .cover:not(:last-child) {
+  margin-right: 32px;
+}
+.index-page .album-carousel .cover:nth-of-type(1) {
+  background-image: url("./assets/images/covers/utah.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(2) {
+  background-image: url("./assets/images/covers/the-scenic-route.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(3) {
+  background-image: url("./assets/images/covers/cadillac-mountain.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(4) {
+  background-image: url("./assets/images/covers/the-narrows.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(5) {
+  background-image: url("./assets/images/covers/way-of-life.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(6) {
+  background-image: url("./assets/images/covers/diamond-in-the-rough.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(7) {
+  background-image: url("./assets/images/covers/chapter-10.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(8) {
+  background-image: url("./assets/images/covers/two-am.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(9) {
+  background-image: url("./assets/images/covers/four-walls.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(10) {
+  background-image: url("./assets/images/covers/backwards-blues.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(11) {
+  background-image: url("./assets/images/covers/good-company.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(12) {
+  background-image: url("./assets/images/covers/pura-vida.jpg");
+}
+.index-page .album-carousel .cover:nth-of-type(13) {
+  background-image: url("./assets/images/covers/daily-routine.jpg");
+}
+.index-page .album-carousel .arrow {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: auto;
+  transition: fill 0.3s;
+}
+.index-page .album-carousel .arrow.clickable {
+  fill: #FCF3D0;
+  cursor: pointer;
+}
+.index-page .album-carousel .arrow.left {
+  left: -82px;
+  transform: translateY(-50%);
+}
+.index-page .album-carousel .arrow.right {
+  right: -82px;
+  transform: translateY(-50%) rotateZ(180deg);
+}
+
+.about-page header {
+  position: relative;
+}
+.about-page header .background {
+  width: 100%;
+  height: 300px;
+  background-image: url("./assets/images/about-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 75% center;
+  filter: brightness(0.3);
+}
+.about-page header .title {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+.about-page header menu {
+  position: absolute;
+  top: 65%;
+  left: 32px;
+  margin: unset;
+  padding: unset;
+  transform: translateY(-50%);
+}
+.about-page header menu li {
+  list-style: none;
+}
+.about-page header menu li a {
+  text-decoration: none;
+}
+.about-page header menu li a h3 {
+  margin-bottom: 16px;
+  color: #FCF3D0;
+}
+.about-page header menu li a h3.current {
+  color: #CD3723;
+}
+.about-page header + .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #423B3F;
+}
+.about-page header + .socials .icon:not(:last-child) {
+  margin-right: 24px;
+}
+.about-page .about {
+  display: flex;
+}
+.about-page .about .portrait {
+  width: 90%;
+  height: auto;
+  border: 10px solid #423B3F;
+  border-radius: 5px;
+}
+.about-page .stats {
+  display: flex;
+  margin-bottom: 256px;
+}
+.about-page .stats .stat-card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.about-page .stats .stat-card .icon {
+  margin-bottom: 30px;
+}
+.about-page .stats .stat-card .icon:before {
+  font-size: 70px;
+}
+.about-page .stats .stat-card h3 {
+  margin-bottom: 8px;
+}
+
+.discography-page header {
+  position: relative;
+}
+.discography-page header .background {
+  width: 100%;
+  height: 300px;
+  background-image: url("./assets/images/discography-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 75% center;
+  filter: brightness(0.3);
+}
+.discography-page header .title {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+.discography-page header menu {
+  position: absolute;
+  top: 65%;
+  left: 32px;
+  margin: unset;
+  padding: unset;
+  transform: translateY(-50%);
+}
+.discography-page header menu li {
+  list-style: none;
+}
+.discography-page header menu li a {
+  text-decoration: none;
+}
+.discography-page header menu li a h3 {
+  margin-bottom: 16px;
+  color: #FCF3D0;
+}
+.discography-page header menu li a h3.current {
+  color: #CD3723;
+}
+.discography-page header + .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #423B3F;
+}
+.discography-page header + .socials .icon:not(:last-child) {
+  margin-right: 24px;
+}
+.discography-page .search.container {
+  margin-top: 64px;
+}
+.discography-page .album.container {
+  margin-top: 64px;
+}
+.discography-page .search {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.discography-page .search label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.discography-page .search label span {
+  margin-right: 16px;
+  text-transform: uppercase;
+}
+.discography-page .search label input {
+  margin: 0;
+  padding-right: 32px;
+}
+.discography-page .search .icon.search {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.discography-page .search .icon.search:before {
+  font-size: 16px;
+}
+.discography-page .album-spotlight {
+  margin-bottom: 128px;
+}
+
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
 .fas,
+.icon.search,
+.icon.record-vinyl,
+.icon.users,
+.icon.headphones,
 .icon.music,
 .far,
 .fal,
@@ -24,7 +351,7 @@
   line-height: 1;
 }
 
-.icon.twitter, .icon.instagram, .icon.deezer, .icon.music, .icon.spotify, .icon.youtube {
+.icon.search, .icon.record-vinyl, .icon.users, .icon.headphones, .icon.twitter, .icon.instagram, .icon.deezer, .icon.music, .icon.spotify, .icon.youtube {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -126,6 +453,10 @@
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
+.fa-pull-left.icon.search,
+.fa-pull-left.icon.record-vinyl,
+.fa-pull-left.icon.users,
+.fa-pull-left.icon.headphones,
 .fa-pull-left.icon.music,
 .far.fa-pull-left,
 .fal.fa-pull-left,
@@ -139,6 +470,10 @@
 }
 .fa.fa-pull-right,
 .fas.fa-pull-right,
+.fa-pull-right.icon.search,
+.fa-pull-right.icon.record-vinyl,
+.fa-pull-right.icon.users,
+.fa-pull-right.icon.headphones,
 .fa-pull-right.icon.music,
 .far.fa-pull-right,
 .fal.fa-pull-right,
@@ -6098,11 +6433,15 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("/assets/webfonts/fa-solid-900.eot");
-  src: url("/assets/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/fa-solid-900.woff2") format("woff2"), url("/assets/webfonts/fa-solid-900.woff") format("woff"), url("/assets/webfonts/fa-solid-900.ttf") format("truetype"), url("/assets/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+  src: url("./assets/webfonts/fa-solid-900.eot");
+  src: url("./assets/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./assets/webfonts/fa-solid-900.woff2") format("woff2"), url("./assets/webfonts/fa-solid-900.woff") format("woff"), url("./assets/webfonts/fa-solid-900.ttf") format("truetype"), url("./assets/webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 .fa,
 .fas,
+.icon.search,
+.icon.record-vinyl,
+.icon.users,
+.icon.headphones,
 .icon.music {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -6117,8 +6456,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/assets/webfonts/fa-brands-400.eot");
-  src: url("/assets/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("/assets/webfonts/fa-brands-400.woff2") format("woff2"), url("/assets/webfonts/fa-brands-400.woff") format("woff"), url("/assets/webfonts/fa-brands-400.ttf") format("truetype"), url("/assets/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+  src: url("./assets/webfonts/fa-brands-400.eot");
+  src: url("./assets/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("./assets/webfonts/fa-brands-400.woff2") format("woff2"), url("./assets/webfonts/fa-brands-400.woff") format("woff"), url("./assets/webfonts/fa-brands-400.ttf") format("truetype"), url("./assets/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 .fab, .icon.twitter, .icon.instagram, .icon.deezer, .icon.spotify, .icon.youtube {
   font-family: "Font Awesome 5 Brands";
@@ -6178,6 +6517,38 @@ readers do not read off random characters that represent icons */
   font-size: 30px;
   transform: translate(-50%, -50%);
 }
+.icon.headphones:before {
+  content: "\f025";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 32px;
+  transform: translate(-50%, -50%);
+}
+.icon.users:before {
+  content: "\f0c0";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 32px;
+  transform: translate(-50%, -50%);
+}
+.icon.record-vinyl:before {
+  content: "\f8d9";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 32px;
+  transform: translate(-50%, -50%);
+}
+.icon.search:before {
+  content: "\f002";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 32px;
+  transform: translate(-50%, -50%);
+}
 
 * {
   box-sizing: border-box;
@@ -6193,6 +6564,7 @@ h1 {
   text-transform: uppercase;
   color: #CD3723;
   font-size: 4rem;
+  cursor: pointer;
 }
 h1 + h4 {
   margin: -42px 0 0 10px;
@@ -6224,6 +6596,10 @@ h3 + h4 {
   font-size: 2.5rem;
   font-weight: 300;
   text-shadow: -1px -1px 0 #131112, 0 -1px 0 #131112, 1px -1px 0 #131112, 1px 0 0 #131112, 1px 1px 0 #131112, 0 1px 0 #131112, -1px 1px 0 #131112, -1px 0 0 #131112;
+}
+
+a {
+  cursor: pointer;
 }
 
 p {
@@ -6268,8 +6644,18 @@ label input, label textarea {
   flex: 0.5;
 }
 
+.col-third {
+  flex: 0.333;
+}
+
 .justify-content-between {
   justify-content: space-between;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end {
+  justify-content: flex-end;
 }
 
 /* Textarea */
@@ -6382,94 +6768,8 @@ body {
   background-color: #131112;
 }
 
-header {
-  position: relative;
-}
-header .video-wrapper {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  width: 100%;
-  max-height: 700px;
-  overflow: hidden;
-  filter: brightness(0.3);
-}
-header .video-wrapper video {
-  width: 100%;
-  aspect-ratio: 16/9;
-}
-header .title {
-  position: absolute;
-  top: 32px;
-  left: 32px;
-}
-header menu {
-  position: absolute;
-  top: 50%;
-  left: 32px;
-  margin: unset;
-  padding: unset;
-  transform: translateY(-50%);
-}
-header menu li {
-  list-style: none;
-}
-header menu li a {
-  text-decoration: none;
-}
-header menu li a h3 {
-  color: #FCF3D0;
-}
-header .gradient {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(0, #131112 10%, #13111200 100%);
-}
-header .socials {
-  position: absolute;
-  display: flex;
-  flex-flow: row;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-header .socials .icon:not(:last-child) {
-  margin-right: 24px;
-}
-
 section {
   margin: 128px 0;
-}
-
-.news {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-}
-.news:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 150%;
-  top: 50%;
-  left: 50%;
-  background: url("/assets/svg/mask.svg") no-repeat center;
-  background-size: contain;
-  opacity: 0.4;
-  transform: translate(-50%, -50%);
-}
-.news .item img {
-  width: 144px;
-  height: 144px;
-  border: 5px solid #423B3F;
-  border-radius: 5px;
-  margin-right: 16px;
-}
-.news .item .content {
-  padding-top: 5px;
 }
 
 .album-spotlight .latest-release {
@@ -6499,40 +6799,6 @@ section {
 }
 .album-spotlight .latest-release .content .tracks .track:not(:last-child) {
   border-bottom: 2px solid #423B3F;
-}
-
-.album-carousel {
-  position: relative;
-  width: 100%;
-  margin-top: 32px;
-}
-.album-carousel .cover-container {
-  display: flex;
-  overflow-x: hidden;
-}
-.album-carousel .cover {
-  flex: 0 0 calc(25% - 24px);
-  aspect-ratio: 1/1;
-  border-radius: 5px;
-  background-color: #423B3F;
-}
-.album-carousel .cover:not(:last-child) {
-  margin-right: 32px;
-}
-.album-carousel .arrow {
-  position: absolute;
-  top: 50%;
-  width: 50px;
-  height: auto;
-}
-.album-carousel .arrow.left {
-  left: -82px;
-  transform: translateY(-50%);
-}
-.album-carousel .arrow.right {
-  right: -82px;
-  transform: translateY(-50%) rotateZ(180deg);
-  fill: #FCF3D0;
 }
 
 footer {

@@ -42,26 +42,50 @@ class AlbumCarousel {
     this.arrowLeft = elementRef.children[1];
     this.arrowRight = elementRef.children[2];
 
+    const albumContainerWidth = Number.parseInt(getComputedStyle(this.albumContainerRef).width);
+
+    const checkArrows = () => {
+      this.scrollPosition > 0
+        ? this.arrowLeft.classList.add("clickable")
+        : this.arrowLeft.classList.remove("clickable");
+      this.scrollPosition < (this.compoundWidth - albumContainerWidth)
+        ? this.arrowRight.classList.add("clickable")
+        : this.arrowRight.classList.remove("clickable");
+    }
+
     const scrollLeft = () => {
       const offsetAmount = this.scrollPosition - this.scrollBy * (this.imageWidth + this.imageGap);
       this.albumContainerRef.scrollTo({left: offsetAmount, behavior: "smooth"});
       this.scrollPosition = Math.max(offsetAmount, 0);
+      checkArrows();
     }
 
     const scrollRight = () => {
       const offsetAmount = this.scrollPosition + this.scrollBy * (this.imageWidth + this.imageGap);
-      console.log( { offsetAmount });
       this.albumContainerRef.scrollTo({left: offsetAmount, behavior: "smooth"});
-      const albumContainerWidth = Number.parseInt(getComputedStyle(this.albumContainerRef).width);
       this.scrollPosition = Math.min(offsetAmount, this.compoundWidth - albumContainerWidth);
+      checkArrows();
     }
 
-    this.arrowLeft.contentDocument.addEventListener("click", scrollLeft);
-    this.arrowRight.contentDocument.addEventListener("click", scrollRight);
+    console.log(this);
+
+    this.arrowLeft.addEventListener("click", scrollLeft);
+    this.arrowRight.addEventListener("click", scrollRight);
 
     if (this.compoundWidth > Number.parseInt(getComputedStyle(this.albumContainerRef).width)) {
-      this.arrowRight.contentDocument.children[0].style.fill = colors.base;
+      this.arrowRight.classList.add("clickable");
     }
   }
+}
 
+function navigateTo(url) {
+  window.location = url;
+}
+
+function scrollToContact() {
+  document.getElementById("contact").scrollIntoView({ behavior: "smooth" })
+}
+
+function alertNotImplemented(component) {
+  window.alert(`${component} has not been implemented (yet)!`);
 }

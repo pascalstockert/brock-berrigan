@@ -1,0 +1,88 @@
+@use "../colors";
+
+.discography-page {
+  header {
+    position: relative;
+    .background {
+      width: 100%;
+      height: 300px;
+      background-image: url("./assets/images/discography-header.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 75% center;
+      filter: brightness(.3);
+    }
+    .title {
+      position: absolute;
+      top: 32px;
+      left: 32px;
+    }
+    menu {
+      position: absolute;
+      top: 65%;
+      left: 32px;
+      margin: unset;
+      padding: unset;
+      transform: translateY(-50%);
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          h3 {
+            margin-bottom: 16px;
+            color: colors.$base;
+            &.current {
+              color: colors.$accent;
+            }
+          }
+        }
+      }
+    }
+    &+ .socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      background-color: colors.$l1;
+      .icon:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+  .search.container {
+    margin-top: 64px;
+  }
+  .album.container {
+    margin-top: 64px;
+  }
+  .search {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    label {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      span {
+        margin-right: 16px;
+        text-transform: uppercase;
+      }
+      input {
+        margin: 0;
+        padding-right: 32px
+      }
+    }
+    .icon.search {
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      &:before {
+        font-size: 16px;
+      }
+    }
+  }
+  .album-spotlight {
+    margin-bottom: 128px;
+  }
+}

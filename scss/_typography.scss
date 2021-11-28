@@ -42,6 +42,7 @@ h1 {
   @include header;
   @include h4-indent;
   font-size: 4rem;
+  cursor: pointer;
 }
 h2 {
   @include header;
@@ -51,6 +52,9 @@ h3 {
   @include header;
   @include h4-indent(1px solid colors.$l0);
   font-size: 2rem;
+}
+a {
+  cursor: pointer;
 }
 p {
   max-width: 52ch;

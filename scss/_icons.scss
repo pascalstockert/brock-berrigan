@@ -49,4 +49,16 @@
   &.twitter {
     @include icon-brand($fa-var-twitter, 30px);
   }
+  &.headphones {
+    @include icon-solid($fa-var-headphones);
+  }
+  &.users {
+    @include icon-solid($fa-var-users);
+  }
+  &.record-vinyl {
+    @include icon-solid($fa-var-record-vinyl);
+  }
+  &.search {
+    @include icon-solid($fa-var-search);
+  }
 }
