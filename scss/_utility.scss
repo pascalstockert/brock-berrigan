@@ -5,6 +5,7 @@
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 16px;
 }
 
 /* Flex Box */
@@ -12,11 +13,16 @@
   display: flex;
   gap: 16px;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .col-half {
   flex: 0.5;
+  flex-grow: 1;
 }
 .col-third {
   flex: 0.333;
+  flex-grow: 1;
 }
 .justify-content {
   &-between {
@@ -27,6 +33,22 @@
   }
   &-end {
     justify-content: flex-end;
+  }
+}
+@media (max-width: 1080px) {
+  .col-half {
+    min-width: 470px;
+  }
+  .col-third {
+    min-width: 180px;
+  }
+}
+@media (max-width: 720px) {
+  .col-half {
+    min-width: 235px;
+  }
+  .col-third {
+    min-width: 120px;
   }
 }
 

@@ -10,8 +10,8 @@ const colors = {
 
 // Ensure the DOM is fully loaded before interacting with it
 document.addEventListener('readystatechange', event => {
-  if (event.target.readyState === "complete") {
-    for (let elementRef of document.getElementsByClassName("album-carousel")) {
+  if (event.target.readyState === 'complete') {
+    for (let elementRef of document.getElementsByClassName('album-carousel')) {
       new AlbumCarousel(elementRef);
     }
   }
@@ -67,14 +67,13 @@ class AlbumCarousel {
       checkArrows();
     }
 
-    console.log(this);
-
     this.arrowLeft.addEventListener("click", scrollLeft);
     this.arrowRight.addEventListener("click", scrollRight);
 
     if (this.compoundWidth > Number.parseInt(getComputedStyle(this.albumContainerRef).width)) {
       this.arrowRight.classList.add("clickable");
     }
+    console.log(this);
   }
 }
 

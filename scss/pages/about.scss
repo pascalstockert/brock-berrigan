@@ -50,16 +50,13 @@
     }
   }
   .about {
-    display: flex;
     .portrait {
-      width: 90%;
-      height: auto;
+      width: 100%;
       border: 10px solid colors.$l1;
       border-radius: 5px;
     }
   }
   .stats {
-    display: flex;
     margin-bottom: 256px;
     .stat-card {
       display: flex;

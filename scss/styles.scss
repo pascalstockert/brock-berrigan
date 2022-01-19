@@ -55,6 +55,31 @@ section {
       }
     }
   }
+  @media screen and (max-width: 940px) {
+    .latest-release {
+      flex-wrap: wrap;
+      img {
+        order: 1;
+        margin-top: 16px;
+        max-width: unset;
+        width: 100%;
+      }
+      .content {
+        order: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 580px) {
+    .latest-release .content {
+      flex-wrap: wrap;
+      .text {
+        width: 100%;
+      }
+      .tracks {
+        width: 100%;
+      }
+    }
+  }
 }
 
 footer {
