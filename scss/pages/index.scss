@@ -119,19 +119,6 @@
       &:not(:last-child) {
         margin-right: 32px;
       }
-      &:nth-of-type(1) { background-image: url("./assets/images/covers/utah.jpg"); }
-      &:nth-of-type(2) { background-image: url("./assets/images/covers/the-scenic-route.jpg"); }
-      &:nth-of-type(3) { background-image: url("./assets/images/covers/cadillac-mountain.jpg"); }
-      &:nth-of-type(4) { background-image: url("./assets/images/covers/the-narrows.jpg"); }
-      &:nth-of-type(5) { background-image: url("./assets/images/covers/way-of-life.jpg"); }
-      &:nth-of-type(6) { background-image: url("./assets/images/covers/diamond-in-the-rough.jpg"); }
-      &:nth-of-type(7) { background-image: url("./assets/images/covers/chapter-10.jpg"); }
-      &:nth-of-type(8) { background-image: url("./assets/images/covers/two-am.jpg"); }
-      &:nth-of-type(9) { background-image: url("./assets/images/covers/four-walls.jpg"); }
-      &:nth-of-type(10) { background-image: url("./assets/images/covers/backwards-blues.jpg"); }
-      &:nth-of-type(11) { background-image: url("./assets/images/covers/good-company.jpg"); }
-      &:nth-of-type(12) { background-image: url("./assets/images/covers/pura-vida.jpg"); }
-      &:nth-of-type(13) { background-image: url("./assets/images/covers/daily-routine.jpg"); }
     }
     .arrow {
       position: absolute;
